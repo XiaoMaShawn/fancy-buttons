@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import App from '../App';
 
-function LightSwitchButton() {
+function LightSwitchButton(props) {
 
-  const [light, setLight] = useState('off');
+  // since we get light/setLight from the parent conponent App.js, we don't need the line below
+  // const [light, setLight] = useState('off');
+
+  const { light, setLight } = props;
 
   // const handleClick = () => {
   //   if (light === 'on') {
